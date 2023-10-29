@@ -1,0 +1,132 @@
+body {
+    background-image: url('/static/images/10-11.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(-45deg, #ffe2d3, #a6dee2, #cfc2fc); */
+}
+
+iframe { position: absolute; float: left; clear: both; z-index: 0; left: no-repeat; }
+
+.glass {
+    position: relative;
+    background: inherit;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 
+                0 6px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    
+}
+
+.glass:before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: -20px;
+    box-shadow: inset 0 0 500px rgba(204, 198, 198, 0.4); 
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 140px);
+    grid-gap: 20px;
+    grid-template-areas: 
+        "box1 box2 box3 box6"
+        "box1 box4 box5 box6"
+        "box7 box7 box7 box7";
+    max-width: fit-content;
+    padding: 20px;
+    justify-content: center;
+    max-height: fit-content;
+}
+
+.box {
+    padding: 20px;
+    background-image: linear-gradient(-45deg, #ffe2d3, #a6dee2, #cfc2fc);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: 1s;
+    
+}
+.box-1 {
+    grid-area: box1;
+    width: 300px;  
+    transition: 1s;
+}
+.box-1:hover{
+    transform: rotateX('180');
+
+}
+
+.box-2 {
+    grid-area: box2;
+    width: 300px;  
+}
+
+.box-3 {
+    grid-area: box3;
+    width: 300px;  
+}
+
+.box-4 {
+    grid-area: box4;
+    width: 300px;  
+}
+
+.box-5 {
+    grid-area: box5;
+    width: 300px;  
+}
+
+.box-6 {
+    grid-area: box6;
+    width: 300px;  
+}
+
+.box-7 {
+    grid-area: box7;
+}
+
+h2 {
+    margin: 0;
+}
+
+.weather-icon {
+    font-size: 2rem;
+}
+
+.temperature {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.location {
+    color: #888;
+}
+
+.air-quality-level {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.pollution-level {
+    color: #888;
+}
+
+p {
+    margin: 0;
+}
